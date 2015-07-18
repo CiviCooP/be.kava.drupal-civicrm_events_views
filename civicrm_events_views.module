@@ -60,7 +60,7 @@ function civicrm_events_views_menu() {
 
 /**
  * Implements hook_init.
- * For debugging only...
+ * For quick debugging only...
  */
 function civicrm_events_views_init() {
 //    views_invalidate_cache();
