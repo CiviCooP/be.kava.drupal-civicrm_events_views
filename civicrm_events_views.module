@@ -1,0 +1,68 @@
+<?php
+/**
+ * Implements hook_views_api.
+ * @return array Views API version
+ */
+function civicrm_events_views_views_api() {
+    return array('api' => 3.0);
+}
+
+/**
+ * Implements hook_views_default_views.
+ * Makes all views listed in the views directory available to the Views module.
+ * @return mixed Array of views
+ */
+function civicrm_events_views_views_default_views() {
+    $files = file_scan_directory(drupal_get_path('module', 'civicrm_events_views') . '/views', '/.inc/');
+    foreach ($files as $filepath => $file) {
+        try {
+            include_once $filepath;
+            if (isset($view)) {
+                $views[$view->name] = $view;
+            }
+        } catch (Exception $e) {
+            //do nothing
+        }
+    }
+    return $views;
+}
+
+/**
+ * Implements hooks_views_data_alter. See views_handler/alter_items.inc for implementation.
+ * Makes a few extra relationships and views available to Views: the location address and contact information,
+ * the duration of an event, and a field that shows whether an event was added recently.
+ * All other information needed on the web site should be available as event fields / custom data by default.
+ * @param array $data Items array passed by hook
+ */
+function civicrm_events_views_views_data_alter(&$data) {
+
+    $alterItems = civicrm_events_views_views_alter_items::getInstance();
+    $data = $alterItems->addAlterItems($data);
+}
+
+/**
+ * Implements hook_menu.
+ * Adds a page that allows users to cancel their registration for an event.
+ * @return array Menu items
+ */
+function civicrm_events_views_menu() {
+    $items = array();
+    $items['evenementen/mijn/afmelden/%'] = array(
+        'title'            => t('Aanmelding annuleren'),
+        'description'      => t('Aanmelding voor evenement annuleren'),
+        'page callback'    => 'drupal_get_form',
+        'page arguments'   => array('civicrm_events_views_cancel_form', 2),
+        'access callback'  => 'civicrm_events_views_user_has_cancel_access',
+        'access arguments' => array(2),
+    );
+    return $items;
+}
+
+/**
+ * Implements hook_init.
+ * For debugging only...
+ */
+function civicrm_events_views_init() {
+//    views_invalidate_cache();
+//    drupal_flush_all_caches();
+}

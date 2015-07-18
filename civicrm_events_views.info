@@ -1,0 +1,10 @@
+name = CiviCRM Events Views (KAVA)
+description = Contains views for events needed for KAVA, extra view fields, and the option to manage/cancel registrationns.
+core = 7.x
+package = CiviCRM
+dependencies[] = civicrm (>=4.4)
+dependencies[] = views
+dependencies[] = views_aggregator
+files[] = civicrm_events_views.module
+files[] = civicrm_events_views.cancel.inc
+files[] = civicrm_events_views.fields.inc
