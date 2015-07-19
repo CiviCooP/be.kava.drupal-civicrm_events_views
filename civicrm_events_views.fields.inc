@@ -30,10 +30,10 @@ class civicrm_events_views_views_alter_items {
         $data['civicrm_event']['is_new'] = $this->getFieldItem('is_new', 'numeric', 'Is new?', 'Show if event was added recently');
         $data['civicrm_event']['duration'] = $this->getFieldItem('duration', 'string', 'Event duration', 'Calculates the difference between start and end dates in hours');
 
-        $data['civicrm_event']['civicrm_loc_block'] = $this->getRelationshipItem('Location Block', 'civicrm_loc_block', 'loc_block_id');
-        $data['civicrm_loc_block']['civicrm_loc_block_address'] = $this->getRelationshipItem('Location Address', 'civicrm_address', 'address_id');
-        $data['civicrm_loc_block']['civicrm_loc_block_phone'] = $this->getRelationshipItem('Location Phone', 'civicrm_phone', 'phone_id');
-        $data['civicrm_loc_block']['civicrm_loc_block_email'] = $this->getRelationshipItem('Location Email', 'civicrm_email', 'email_id');
+        $data['civicrm_event']['civicrm_loc_block'] = $this->getRelationshipItem('civicrm_loc_block', 'loc_block_id', 'Location Block');
+        $data['civicrm_loc_block']['civicrm_loc_block_address'] = $this->getRelationshipItem('civicrm_address', 'address_id', 'Location Address');
+        $data['civicrm_loc_block']['civicrm_loc_block_phone'] = $this->getRelationshipItem('civicrm_phone', 'phone_id','Location Phone');
+        $data['civicrm_loc_block']['civicrm_loc_block_email'] = $this->getRelationshipItem('civicrm_email', 'email_id', 'Location Email');
 
         return $data;
     }
@@ -70,15 +70,16 @@ class civicrm_events_views_views_alter_items {
      * @param string $relationshipField Relationship field
      * @return array Relationship parameters
      */
-    private function getRelationshipItem($title, $relationshipBase, $relationshipField) {
+    private function getRelationshipItem($relationshipBase, $relationshipField, $title) {
 
         return array(
             'title'        => t($title),
             'relationship' => array(
-                'handler'    => 'views_handler_relationship',
-                'base'       => $relationshipBase,
-                'base field' => 'id',
-                'field'      => $relationshipField,
+                'label'              => t($title),
+                'handler'            => 'views_handler_relationship',
+                'base'               => $relationshipBase,
+                'base field'         => 'id',
+                'relationship field' => $relationshipField,
             ),
         );
     }
@@ -112,7 +113,7 @@ class civicrm_events_views_handler_duration extends views_handler_field_custom {
         parent::pre_query();
         $this->add_additional_fields(array(
             'civicrm_event_start_date' => array('table' => 'civicrm_event', 'field' => 'start_date'),
-            'civicrm_event_end_date' => array('table' => 'civicrm_event', 'field' => 'end_date'),
+            'civicrm_event_end_date'   => array('table' => 'civicrm_event', 'field' => 'end_date'),
         ));
     }
 
@@ -172,11 +173,11 @@ class civicrm_events_views_handler_is_new extends views_handler_field_custom {
 
     function render($values) {
 
-        if(!$values->civicrm_event_created_date)
+        if (!$values->civicrm_event_created_date)
             return false;
 
         $days = (float)$this->options['days_count'];
-        if(!$days)
+        if (!$days)
             $days = 7;
 
         $createdDate = new \DateTime((is_numeric($values->civicrm_event_created_date) ? '@' : '') . $values->civicrm_event_created_date);

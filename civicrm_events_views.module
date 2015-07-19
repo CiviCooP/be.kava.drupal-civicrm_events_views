@@ -47,12 +47,13 @@ function civicrm_events_views_views_data_alter(&$data) {
  */
 function civicrm_events_views_menu() {
     $items = array();
-    $items['evenementen/mijn/afmelden/%'] = array(
+    $items['evenementen/afmelden/%'] = array(
         'title'            => t('Aanmelding annuleren'),
         'description'      => t('Aanmelding voor evenement annuleren'),
+        'file'             => 'civicrm_events_views.cancel.inc',
         'page callback'    => 'drupal_get_form',
         'page arguments'   => array('civicrm_events_views_cancel_form', 2),
-        'access callback'  => 'civicrm_events_views_user_has_cancel_access',
+        'access callback'  => true,
         'access arguments' => array(2),
     );
     return $items;
@@ -60,9 +61,10 @@ function civicrm_events_views_menu() {
 
 /**
  * Implements hook_init.
- * For quick debugging only...
+ * For quick debugging / checks only...
  */
 function civicrm_events_views_init() {
 //    views_invalidate_cache();
+//    menu_rebuild();
 //    drupal_flush_all_caches();
 }

@@ -1,11 +1,10 @@
 <?php
-
 $view = new view();
-$view->name = 'my_event_registrations';
+$view->name = 'myevents_registered';
 $view->description = '';
 $view->tag = 'default';
 $view->base_table = 'civicrm_participant';
-$view->human_name = 'My Event Registrations';
+$view->human_name = 'Mijn evenementen';
 $view->core = 7;
 $view->api_version = '3.0';
 $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
@@ -16,13 +15,12 @@ $handler->display->display_options['title'] = 'Mijn evenementen';
 $handler->display->display_options['use_more_always'] = FALSE;
 $handler->display->display_options['access']['type'] = 'role';
 $handler->display->display_options['access']['role'] = array(
-    2 => '2',
+2 => '2',
 );
 $handler->display->display_options['cache']['type'] = 'none';
 $handler->display->display_options['query']['type'] = 'views_query';
 $handler->display->display_options['exposed_form']['type'] = 'basic';
 $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Opnieuw instellen';
-$handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Sorteren op';
 $handler->display->display_options['pager']['type'] = 'full';
 $handler->display->display_options['pager']['options']['items_per_page'] = '10';
 $handler->display->display_options['pager']['options']['offset'] = '0';
@@ -34,55 +32,55 @@ $handler->display->display_options['pager']['options']['tags']['next'] = 'volgen
 $handler->display->display_options['pager']['options']['tags']['last'] = 'laatste »';
 $handler->display->display_options['style_plugin'] = 'table';
 $handler->display->display_options['style_options']['columns'] = array(
-    'id' => 'id',
-    'start_date' => 'start_date',
-    'title' => 'title',
-    'role' => 'role',
-    'status' => 'status',
-    'nothing' => 'nothing',
+'id' => 'id',
+'start_date' => 'start_date',
+'title' => 'title',
+'role' => 'role',
+'status' => 'status',
+'nothing' => 'nothing',
 );
 $handler->display->display_options['style_options']['default'] = '-1';
 $handler->display->display_options['style_options']['info'] = array(
-    'id' => array(
-        'sortable' => 0,
-        'default_sort_order' => 'asc',
-        'align' => '',
-        'separator' => '',
-        'empty_column' => 0,
-    ),
-    'start_date' => array(
-        'sortable' => 0,
-        'default_sort_order' => 'asc',
-        'align' => '',
-        'separator' => '',
-        'empty_column' => 0,
-    ),
-    'title' => array(
-        'sortable' => 0,
-        'default_sort_order' => 'asc',
-        'align' => '',
-        'separator' => '',
-        'empty_column' => 0,
-    ),
-    'role' => array(
-        'sortable' => 0,
-        'default_sort_order' => 'asc',
-        'align' => '',
-        'separator' => '',
-        'empty_column' => 0,
-    ),
-    'status' => array(
-        'sortable' => 0,
-        'default_sort_order' => 'asc',
-        'align' => '',
-        'separator' => '',
-        'empty_column' => 0,
-    ),
-    'nothing' => array(
-        'align' => '',
-        'separator' => '',
-        'empty_column' => 0,
-    ),
+'id' => array(
+'sortable' => 0,
+'default_sort_order' => 'asc',
+'align' => '',
+'separator' => '',
+'empty_column' => 0,
+),
+'start_date' => array(
+'sortable' => 0,
+'default_sort_order' => 'asc',
+'align' => '',
+'separator' => '',
+'empty_column' => 0,
+),
+'title' => array(
+'sortable' => 0,
+'default_sort_order' => 'asc',
+'align' => '',
+'separator' => '',
+'empty_column' => 0,
+),
+'role' => array(
+'sortable' => 0,
+'default_sort_order' => 'asc',
+'align' => '',
+'separator' => '',
+'empty_column' => 0,
+),
+'status' => array(
+'sortable' => 0,
+'default_sort_order' => 'asc',
+'align' => '',
+'separator' => '',
+'empty_column' => 0,
+),
+'nothing' => array(
+'align' => '',
+'separator' => '',
+'empty_column' => 0,
+),
 );
 /* Kop: Global: Text area */
 $handler->display->display_options['header']['area']['id'] = 'area';
@@ -97,7 +95,12 @@ $handler->display->display_options['footer']['view']['id'] = 'view';
 $handler->display->display_options['footer']['view']['table'] = 'views';
 $handler->display->display_options['footer']['view']['field'] = 'view';
 $handler->display->display_options['footer']['view']['empty'] = TRUE;
-$handler->display->display_options['footer']['view']['view_to_insert'] = 'my_past_event_registrations:default';
+$handler->display->display_options['footer']['view']['view_to_insert'] = 'myevents_attended:block_myevents_attended';
+/* Voet: Global: View area */
+$handler->display->display_options['footer']['view_1']['id'] = 'view_1';
+$handler->display->display_options['footer']['view_1']['table'] = 'views';
+$handler->display->display_options['footer']['view_1']['field'] = 'view';
+$handler->display->display_options['footer']['view_1']['view_to_insert'] = 'myevents_cancelled:block_myevents_cancelled';
 /* No results behavior: Global: Unfiltered text */
 $handler->display->display_options['empty']['area_text_custom']['id'] = 'area_text_custom';
 $handler->display->display_options['empty']['area_text_custom']['table'] = 'views';
@@ -161,7 +164,7 @@ $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
 $handler->display->display_options['fields']['nothing']['label'] = '';
 $handler->display->display_options['fields']['nothing']['alter']['text'] = 'Afmelden';
 $handler->display->display_options['fields']['nothing']['alter']['make_link'] = TRUE;
-$handler->display->display_options['fields']['nothing']['alter']['path'] = 'evenementen/mijn/afmelden/[id]?destination=evenementen/mijn';
+$handler->display->display_options['fields']['nothing']['alter']['path'] = 'evenementen/afmelden/[id]?destination=evenementen/mijn';
 $handler->display->display_options['fields']['nothing']['alter']['absolute'] = TRUE;
 $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
 /* Sort criterion: CiviCRM Events: Start Date */
@@ -187,52 +190,56 @@ $handler->display->display_options['filters']['status']['id'] = 'status';
 $handler->display->display_options['filters']['status']['table'] = 'civicrm_participant';
 $handler->display->display_options['filters']['status']['field'] = 'status';
 $handler->display->display_options['filters']['status']['value'] = array(
-    1 => '1',
-    2 => '2',
-    5 => '5',
-    6 => '6',
-    9 => '9',
-    13 => '13',
-    14 => '14',
-    15 => '15',
+1 => '1',
+2 => '2',
+5 => '5',
+6 => '6',
+9 => '9',
+13 => '13',
+14 => '14',
+15 => '15',
 );
 
-/* Display: Page */
-$handler = $view->new_display('page', 'Page', 'page');
+/* Display: Pagina Mijn evenementen (alle blokken) */
+$handler = $view->new_display('page', 'Pagina Mijn evenementen (alle blokken)', 'page_myevents_registered');
 $handler->display->display_options['path'] = 'evenementen/mijn';
-$handler->display->display_options['menu']['type'] = 'normal';
 $handler->display->display_options['menu']['title'] = 'Mijn evenementen';
 $handler->display->display_options['menu']['weight'] = '0';
 $handler->display->display_options['menu']['name'] = 'main-menu';
 $handler->display->display_options['menu']['context'] = 0;
 $handler->display->display_options['menu']['context_only_inline'] = 0;
-$translatables['my_event_registrations'] = array(
-    t('Master'),
-    t('Mijn evenementen'),
-    t('more'),
-    t('Apply'),
-    t('Opnieuw instellen'),
-    t('Sorteren op'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« eerste'),
-    t('‹ vorige'),
-    t('volgende ›'),
-    t('laatste »'),
-    t('Title'),
-    t('<h2>Ik ga naar</h2>'),
-    t('You are not registered for any upcoming events'),
-    t('Event'),
-    t('Contact'),
-    t('Drupal User'),
-    t('.'),
-    t('Datum'),
-    t('Evenement'),
-    t('Rol'),
-    t('Status'),
-    t('Afmelden'),
-    t('Page'),
+
+/* Display: Blok Mijn evenementen (aangemeld) */
+$handler = $view->new_display('block', 'Blok Mijn evenementen (aangemeld)', 'block_myevents_registered');
+$handler->display->display_options['defaults']['footer'] = FALSE;
+$translatables['myevents_registered'] = array(
+t('Master'),
+t('Mijn evenementen'),
+t('more'),
+t('Apply'),
+t('Opnieuw instellen'),
+t('Sort by'),
+t('Asc'),
+t('Desc'),
+t('Items per page'),
+t('- All -'),
+t('Offset'),
+t('« eerste'),
+t('‹ vorige'),
+t('volgende ›'),
+t('laatste »'),
+t('Title'),
+t('<h2>Ik ga naar</h2>'),
+t('U bent nog niet aangemeld voor toekomstige evenementen.'),
+t('Event'),
+t('Contact'),
+t('Drupal User'),
+t('.'),
+t('Datum'),
+t('Evenement'),
+t('Rol'),
+t('Status'),
+t('Afmelden'),
+t('Pagina Mijn evenementen (alle blokken)'),
+t('Blok Mijn evenementen (aangemeld)'),
 );
