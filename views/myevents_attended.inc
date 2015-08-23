@@ -11,11 +11,11 @@ $view->disabled = FALSE; /* Edit this to true to make a default view disabled in
 
 /* Display: Master */
 $handler = $view->new_display('default', 'Master', 'default');
-$handler->display->display_options['title'] = 'Ik was bij';
+$handler->display->display_options['title'] = 'Mijn deelgenomen evenementen';
 $handler->display->display_options['use_more_always'] = FALSE;
 $handler->display->display_options['access']['type'] = 'role';
 $handler->display->display_options['access']['role'] = array(
-    2 => '2',
+  2 => '2',
 );
 $handler->display->display_options['cache']['type'] = 'none';
 $handler->display->display_options['query']['type'] = 'views_query';
@@ -33,110 +33,110 @@ $handler->display->display_options['pager']['options']['tags']['next'] = 'volgen
 $handler->display->display_options['pager']['options']['tags']['last'] = 'laatste »';
 $handler->display->display_options['style_plugin'] = 'views_aggregator';
 $handler->display->display_options['style_options']['columns'] = array(
-    'id' => 'id',
-    'start_date' => 'start_date',
-    'title' => 'title',
-    'role' => 'role',
-    'status' => 'status',
-    'accreditatiepunten_9' => 'accreditatiepunten_9',
+  'id' => 'id',
+  'start_date' => 'start_date',
+  'title' => 'title',
+  'role' => 'role',
+  'status' => 'status',
+  'accreditatiepunten_9' => 'accreditatiepunten_9',
 );
 $handler->display->display_options['style_options']['default'] = '-1';
 $handler->display->display_options['style_options']['info'] = array(
-    'id' => array(
-        'sortable' => 0,
-        'default_sort_order' => 'asc',
-        'align' => '',
-        'separator' => '',
-        'empty_column' => 0,
-        'has_aggr' => 0,
-        'aggr' => array(
-            'views_aggregator_first' => 'views_aggregator_first',
-        ),
-        'aggr_par' => '',
-        'has_aggr_column' => 0,
-        'aggr_column' => 'views_aggregator_sum',
-        'aggr_par_column' => '',
+  'id' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+    'has_aggr' => 0,
+    'aggr' => array(
+      'views_aggregator_first' => 'views_aggregator_first',
     ),
-    'start_date' => array(
-        'sortable' => 0,
-        'default_sort_order' => 'asc',
-        'align' => '',
-        'separator' => '',
-        'empty_column' => 0,
-        'has_aggr' => 0,
-        'aggr' => array(
-            'views_aggregator_first' => 'views_aggregator_first',
-        ),
-        'aggr_par' => '',
-        'has_aggr_column' => 0,
-        'aggr_column' => 'views_aggregator_sum',
-        'aggr_par_column' => '',
+    'aggr_par' => '',
+    'has_aggr_column' => 0,
+    'aggr_column' => 'views_aggregator_sum',
+    'aggr_par_column' => '',
+  ),
+  'start_date' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+    'has_aggr' => 0,
+    'aggr' => array(
+      'views_aggregator_first' => 'views_aggregator_first',
     ),
-    'title' => array(
-        'sortable' => 0,
-        'default_sort_order' => 'asc',
-        'align' => '',
-        'separator' => '',
-        'empty_column' => 0,
-        'has_aggr' => 0,
-        'aggr' => array(
-            'views_aggregator_first' => 'views_aggregator_first',
-        ),
-        'aggr_par' => '',
-        'has_aggr_column' => 0,
-        'aggr_column' => 'views_aggregator_sum',
-        'aggr_par_column' => '',
+    'aggr_par' => '',
+    'has_aggr_column' => 0,
+    'aggr_column' => 'views_aggregator_sum',
+    'aggr_par_column' => '',
+  ),
+  'title' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+    'has_aggr' => 0,
+    'aggr' => array(
+      'views_aggregator_first' => 'views_aggregator_first',
     ),
-    'role' => array(
-        'sortable' => 0,
-        'default_sort_order' => 'asc',
-        'align' => '',
-        'separator' => '',
-        'empty_column' => 0,
-        'has_aggr' => 0,
-        'aggr' => array(
-            'views_aggregator_first' => 'views_aggregator_first',
-        ),
-        'aggr_par' => '',
-        'has_aggr_column' => 0,
-        'aggr_column' => 'views_aggregator_sum',
-        'aggr_par_column' => '',
+    'aggr_par' => '',
+    'has_aggr_column' => 0,
+    'aggr_column' => 'views_aggregator_sum',
+    'aggr_par_column' => '',
+  ),
+  'role' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+    'has_aggr' => 0,
+    'aggr' => array(
+      'views_aggregator_first' => 'views_aggregator_first',
     ),
-    'status' => array(
-        'sortable' => 0,
-        'default_sort_order' => 'asc',
-        'align' => '',
-        'separator' => '',
-        'empty_column' => 0,
-        'has_aggr' => 0,
-        'aggr' => array(
-            'views_aggregator_first' => 'views_aggregator_first',
-        ),
-        'aggr_par' => '',
-        'has_aggr_column' => 0,
-        'aggr_column' => 'views_aggregator_sum',
-        'aggr_par_column' => '',
+    'aggr_par' => '',
+    'has_aggr_column' => 0,
+    'aggr_column' => 'views_aggregator_sum',
+    'aggr_par_column' => '',
+  ),
+  'status' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+    'has_aggr' => 0,
+    'aggr' => array(
+      'views_aggregator_first' => 'views_aggregator_first',
     ),
-    'accreditatiepunten_9' => array(
-        'sortable' => 0,
-        'default_sort_order' => 'asc',
-        'align' => '',
-        'separator' => '',
-        'empty_column' => 0,
-        'has_aggr' => 0,
-        'aggr' => array(
-            'views_aggregator_first' => 'views_aggregator_first',
-        ),
-        'aggr_par' => '',
-        'has_aggr_column' => 1,
-        'aggr_column' => 'views_aggregator_sum',
-        'aggr_par_column' => '',
+    'aggr_par' => '',
+    'has_aggr_column' => 0,
+    'aggr_column' => 'views_aggregator_sum',
+    'aggr_par_column' => '',
+  ),
+  'accreditatiepunten_9' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+    'has_aggr' => 0,
+    'aggr' => array(
+      'views_aggregator_first' => 'views_aggregator_first',
     ),
+    'aggr_par' => '',
+    'has_aggr_column' => 1,
+    'aggr_column' => 'views_aggregator_sum',
+    'aggr_par_column' => '',
+  ),
 );
 $handler->display->display_options['style_options']['column_aggregation']['totals_per_page'] = '0';
 $handler->display->display_options['style_options']['column_aggregation']['totals_row_position'] = array(
-    1 => 0,
-    2 => '2',
+  1 => 0,
+  2 => '2',
 );
 $handler->display->display_options['style_options']['column_aggregation']['precision'] = '0';
 /* Kop: Global: Text area */
@@ -146,6 +146,12 @@ $handler->display->display_options['header']['area']['field'] = 'area';
 $handler->display->display_options['header']['area']['label'] = 'Title';
 $handler->display->display_options['header']['area']['content'] = '<h2>Ik was bij</h2>';
 $handler->display->display_options['header']['area']['format'] = 'full_html';
+/* No results behavior: Global: Unfiltered text */
+$handler->display->display_options['empty']['area_text_custom']['id'] = 'area_text_custom';
+$handler->display->display_options['empty']['area_text_custom']['table'] = 'views';
+$handler->display->display_options['empty']['area_text_custom']['field'] = 'area_text_custom';
+$handler->display->display_options['empty']['area_text_custom']['empty'] = TRUE;
+$handler->display->display_options['empty']['area_text_custom']['content'] = 'U heeft nog niet deelgenomen aan evenementen';
 /* Relationship: CiviCRM Participants: Event ID */
 $handler->display->display_options['relationships']['event_id']['id'] = 'event_id';
 $handler->display->display_options['relationships']['event_id']['table'] = 'civicrm_participant';
@@ -222,42 +228,45 @@ $handler->display->display_options['filters']['status']['id'] = 'status';
 $handler->display->display_options['filters']['status']['table'] = 'civicrm_participant';
 $handler->display->display_options['filters']['status']['field'] = 'status';
 $handler->display->display_options['filters']['status']['value'] = array(
-    1 => '1',
-    2 => '2',
+  1 => '1',
+  2 => '2',
 );
 $handler->display->display_options['filters']['status']['group'] = 1;
 
 /* Display: Blok Mijn evenementen (historie) */
 $handler = $view->new_display('block', 'Blok Mijn evenementen (historie)', 'block_myevents_attended');
+$handler->display->display_options['defaults']['css_class'] = FALSE;
+$handler->display->display_options['css_class'] = 'view-vacancy';
 $handler->display->display_options['defaults']['footer'] = FALSE;
 $handler->display->display_options['block_description'] = 'Mijn evenementen (historie)';
 $translatables['myevents_attended'] = array(
-    t('Master'),
-    t('Ik was bij'),
-    t('more'),
-    t('Apply'),
-    t('Opnieuw instellen'),
-    t('Sorteren op'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« eerste'),
-    t('‹ vorige'),
-    t('volgende ›'),
-    t('laatste »'),
-    t('Title'),
-    t('<h2>Ik was bij</h2>'),
-    t('Cancelled Registrations'),
-    t('Event'),
-    t('Contact'),
-    t('Drupal User'),
-    t('.'),
-    t('Date'),
-    t('Evenement'),
-    t('Rol'),
-    t('Status'),
-    t('Blok Mijn evenementen (historie)'),
-    t('Mijn evenementen (historie)'),
+  t('Master'),
+  t('Mijn deelgenomen evenementen'),
+  t('more'),
+  t('Apply'),
+  t('Opnieuw instellen'),
+  t('Sorteren op'),
+  t('Asc'),
+  t('Desc'),
+  t('Items per page'),
+  t('- All -'),
+  t('Offset'),
+  t('« eerste'),
+  t('‹ vorige'),
+  t('volgende ›'),
+  t('laatste »'),
+  t('Title'),
+  t('<h2>Ik was bij</h2>'),
+  t('U heeft nog niet deelgenomen aan evenementen'),
+  t('Event'),
+  t('Contact'),
+  t('Drupal User'),
+  t('.'),
+  t('Date'),
+  t('Evenement'),
+  t('Rol'),
+  t('Status'),
+  t('Blok Mijn evenementen (historie)'),
+  t('Mijn evenementen (historie)'),
 );
+

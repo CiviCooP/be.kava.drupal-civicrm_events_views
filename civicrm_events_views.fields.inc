@@ -183,6 +183,6 @@ class civicrm_events_views_handler_is_new extends views_handler_field_custom {
         $createdDate = new \DateTime((is_numeric($values->civicrm_event_created_date) ? '@' : '') . $values->civicrm_event_created_date);
         $diff = $createdDate->diff(new \DateTime('now'));
 
-        return ($diff->d <= $days ? 'true' : 'false');
+        return ($diff->d <= $days ? t('New!') : '');
     }
 }

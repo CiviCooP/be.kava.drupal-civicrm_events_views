@@ -11,11 +11,11 @@ $view->disabled = FALSE; /* Edit this to true to make a default view disabled in
 
 /* Display: Master */
 $handler = $view->new_display('default', 'Master', 'default');
-$handler->display->display_options['title'] = 'Ik ben niet bij';
+$handler->display->display_options['title'] = 'Mijn geannuleerde evenementen';
 $handler->display->display_options['use_more_always'] = FALSE;
 $handler->display->display_options['access']['type'] = 'role';
 $handler->display->display_options['access']['role'] = array(
-    2 => '2',
+  2 => '2',
 );
 $handler->display->display_options['cache']['type'] = 'none';
 $handler->display->display_options['query']['type'] = 'views_query';
@@ -33,56 +33,56 @@ $handler->display->display_options['pager']['options']['tags']['next'] = 'volgen
 $handler->display->display_options['pager']['options']['tags']['last'] = 'laatste »';
 $handler->display->display_options['style_plugin'] = 'table';
 $handler->display->display_options['style_options']['columns'] = array(
-    'id' => 'id',
-    'start_date' => 'start_date',
-    'title' => 'title',
-    'role' => 'role',
-    'status' => 'status',
+  'id' => 'id',
+  'start_date' => 'start_date',
+  'title' => 'title',
+  'role' => 'role',
+  'status' => 'status',
 );
 $handler->display->display_options['style_options']['default'] = '-1';
 $handler->display->display_options['style_options']['info'] = array(
-    'id' => array(
-        'sortable' => 0,
-        'default_sort_order' => 'asc',
-        'align' => '',
-        'separator' => '',
-        'empty_column' => 0,
-    ),
-    'start_date' => array(
-        'sortable' => 0,
-        'default_sort_order' => 'asc',
-        'align' => '',
-        'separator' => '',
-        'empty_column' => 0,
-    ),
-    'title' => array(
-        'sortable' => 0,
-        'default_sort_order' => 'asc',
-        'align' => '',
-        'separator' => '',
-        'empty_column' => 0,
-    ),
-    'role' => array(
-        'sortable' => 0,
-        'default_sort_order' => 'asc',
-        'align' => '',
-        'separator' => '',
-        'empty_column' => 0,
-    ),
-    'status' => array(
-        'sortable' => 0,
-        'default_sort_order' => 'asc',
-        'align' => '',
-        'separator' => '',
-        'empty_column' => 0,
-    ),
+  'id' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'start_date' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'title' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'role' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'status' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
 );
-/* Kop: Global: Text area */
-$handler->display->display_options['header']['area']['id'] = 'area';
-$handler->display->display_options['header']['area']['table'] = 'views';
-$handler->display->display_options['header']['area']['field'] = 'area';
-$handler->display->display_options['header']['area']['content'] = '<h2>Ik ben niet bij</h2>';
-$handler->display->display_options['header']['area']['format'] = 'full_html';
+/* No results behavior: Global: Unfiltered text */
+$handler->display->display_options['empty']['area_text_custom']['id'] = 'area_text_custom';
+$handler->display->display_options['empty']['area_text_custom']['table'] = 'views';
+$handler->display->display_options['empty']['area_text_custom']['field'] = 'area_text_custom';
+$handler->display->display_options['empty']['area_text_custom']['empty'] = TRUE;
+$handler->display->display_options['empty']['area_text_custom']['content'] = 'U heeft geen geannuleerde evenementen.';
 /* Relationship: CiviCRM Participants: Event ID */
 $handler->display->display_options['relationships']['event_id']['id'] = 'event_id';
 $handler->display->display_options['relationships']['event_id']['table'] = 'civicrm_participant';
@@ -152,39 +152,42 @@ $handler->display->display_options['filters']['status_1']['id'] = 'status_1';
 $handler->display->display_options['filters']['status_1']['table'] = 'civicrm_participant';
 $handler->display->display_options['filters']['status_1']['field'] = 'status';
 $handler->display->display_options['filters']['status_1']['value'] = array(
-    3 => '3',
-    4 => '4',
+  3 => '3',
+  4 => '4',
 );
 $handler->display->display_options['filters']['status_1']['group'] = 1;
 
 /* Display: Blok Mijn evenementen (geannuleerd) */
 $handler = $view->new_display('block', 'Blok Mijn evenementen (geannuleerd)', 'block_myevents_cancelled');
+$handler->display->display_options['defaults']['css_class'] = FALSE;
+$handler->display->display_options['css_class'] = 'view-vacancy';
 $handler->display->display_options['block_description'] = 'Mijn evenementen (geannuleerd)';
 $translatables['myevents_cancelled'] = array(
-    t('Master'),
-    t('Ik ben niet bij'),
-    t('more'),
-    t('Apply'),
-    t('Opnieuw instellen'),
-    t('Sorteren op'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« eerste'),
-    t('‹ vorige'),
-    t('volgende ›'),
-    t('laatste »'),
-    t('<h2>Ik ben niet bij</h2>'),
-    t('Event'),
-    t('Contact'),
-    t('Drupal User'),
-    t('.'),
-    t('Datum'),
-    t('Evenementen'),
-    t('Rol'),
-    t('Status'),
-    t('Blok Mijn evenementen (geannuleerd)'),
-    t('Mijn evenementen (geannuleerd)'),
+  t('Master'),
+  t('Mijn geannuleerde evenementen'),
+  t('more'),
+  t('Apply'),
+  t('Opnieuw instellen'),
+  t('Sorteren op'),
+  t('Asc'),
+  t('Desc'),
+  t('Items per page'),
+  t('- All -'),
+  t('Offset'),
+  t('« eerste'),
+  t('‹ vorige'),
+  t('volgende ›'),
+  t('laatste »'),
+  t('U heeft geen geannuleerde evenementen.'),
+  t('Event'),
+  t('Contact'),
+  t('Drupal User'),
+  t('.'),
+  t('Datum'),
+  t('Evenementen'),
+  t('Rol'),
+  t('Status'),
+  t('Blok Mijn evenementen (geannuleerd)'),
+  t('Mijn evenementen (geannuleerd)'),
 );
+

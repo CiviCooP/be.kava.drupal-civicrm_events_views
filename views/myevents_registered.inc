@@ -12,10 +12,11 @@ $view->disabled = FALSE; /* Edit this to true to make a default view disabled in
 /* Display: Master */
 $handler = $view->new_display('default', 'Master', 'default');
 $handler->display->display_options['title'] = 'Mijn evenementen';
+$handler->display->display_options['css_class'] = 'view-vacancy';
 $handler->display->display_options['use_more_always'] = FALSE;
 $handler->display->display_options['access']['type'] = 'role';
 $handler->display->display_options['access']['role'] = array(
-2 => '2',
+  2 => '2',
 );
 $handler->display->display_options['cache']['type'] = 'none';
 $handler->display->display_options['query']['type'] = 'views_query';
@@ -32,64 +33,56 @@ $handler->display->display_options['pager']['options']['tags']['next'] = 'volgen
 $handler->display->display_options['pager']['options']['tags']['last'] = 'laatste »';
 $handler->display->display_options['style_plugin'] = 'table';
 $handler->display->display_options['style_options']['columns'] = array(
-'id' => 'id',
-'start_date' => 'start_date',
-'title' => 'title',
-'role' => 'role',
-'status' => 'status',
-'nothing' => 'nothing',
+  'id' => 'id',
+  'start_date' => 'start_date',
+  'title' => 'title',
+  'role' => 'role',
+  'status' => 'status',
+  'nothing' => 'nothing',
 );
 $handler->display->display_options['style_options']['default'] = '-1';
 $handler->display->display_options['style_options']['info'] = array(
-'id' => array(
-'sortable' => 0,
-'default_sort_order' => 'asc',
-'align' => '',
-'separator' => '',
-'empty_column' => 0,
-),
-'start_date' => array(
-'sortable' => 0,
-'default_sort_order' => 'asc',
-'align' => '',
-'separator' => '',
-'empty_column' => 0,
-),
-'title' => array(
-'sortable' => 0,
-'default_sort_order' => 'asc',
-'align' => '',
-'separator' => '',
-'empty_column' => 0,
-),
-'role' => array(
-'sortable' => 0,
-'default_sort_order' => 'asc',
-'align' => '',
-'separator' => '',
-'empty_column' => 0,
-),
-'status' => array(
-'sortable' => 0,
-'default_sort_order' => 'asc',
-'align' => '',
-'separator' => '',
-'empty_column' => 0,
-),
-'nothing' => array(
-'align' => '',
-'separator' => '',
-'empty_column' => 0,
-),
+  'id' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'start_date' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'title' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'role' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'status' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'nothing' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
 );
-/* Kop: Global: Text area */
-$handler->display->display_options['header']['area']['id'] = 'area';
-$handler->display->display_options['header']['area']['table'] = 'views';
-$handler->display->display_options['header']['area']['field'] = 'area';
-$handler->display->display_options['header']['area']['label'] = 'Title';
-$handler->display->display_options['header']['area']['empty'] = TRUE;
-$handler->display->display_options['header']['area']['content'] = '<h2>Ik ga naar</h2>';
-$handler->display->display_options['header']['area']['format'] = 'full_html';
 /* Voet: Global: View area */
 $handler->display->display_options['footer']['view']['id'] = 'view';
 $handler->display->display_options['footer']['view']['table'] = 'views';
@@ -190,18 +183,20 @@ $handler->display->display_options['filters']['status']['id'] = 'status';
 $handler->display->display_options['filters']['status']['table'] = 'civicrm_participant';
 $handler->display->display_options['filters']['status']['field'] = 'status';
 $handler->display->display_options['filters']['status']['value'] = array(
-1 => '1',
-2 => '2',
-5 => '5',
-6 => '6',
-9 => '9',
-13 => '13',
-14 => '14',
-15 => '15',
+  1 => '1',
+  2 => '2',
+  5 => '5',
+  6 => '6',
+  9 => '9',
+  13 => '13',
+  14 => '14',
+  15 => '15',
 );
 
 /* Display: Pagina Mijn evenementen (alle blokken) */
 $handler = $view->new_display('page', 'Pagina Mijn evenementen (alle blokken)', 'page_myevents_registered');
+$handler->display->display_options['defaults']['css_class'] = FALSE;
+$handler->display->display_options['css_class'] = 'view-events--overview';
 $handler->display->display_options['path'] = 'evenementen/mijn';
 $handler->display->display_options['menu']['title'] = 'Mijn evenementen';
 $handler->display->display_options['menu']['weight'] = '0';
@@ -213,33 +208,31 @@ $handler->display->display_options['menu']['context_only_inline'] = 0;
 $handler = $view->new_display('block', 'Blok Mijn evenementen (aangemeld)', 'block_myevents_registered');
 $handler->display->display_options['defaults']['footer'] = FALSE;
 $translatables['myevents_registered'] = array(
-t('Master'),
-t('Mijn evenementen'),
-t('more'),
-t('Apply'),
-t('Opnieuw instellen'),
-t('Sort by'),
-t('Asc'),
-t('Desc'),
-t('Items per page'),
-t('- All -'),
-t('Offset'),
-t('« eerste'),
-t('‹ vorige'),
-t('volgende ›'),
-t('laatste »'),
-t('Title'),
-t('<h2>Ik ga naar</h2>'),
-t('U bent nog niet aangemeld voor toekomstige evenementen.'),
-t('Event'),
-t('Contact'),
-t('Drupal User'),
-t('.'),
-t('Datum'),
-t('Evenement'),
-t('Rol'),
-t('Status'),
-t('Afmelden'),
-t('Pagina Mijn evenementen (alle blokken)'),
-t('Blok Mijn evenementen (aangemeld)'),
+  t('Master'),
+  t('Mijn evenementen'),
+  t('more'),
+  t('Apply'),
+  t('Opnieuw instellen'),
+  t('Sort by'),
+  t('Asc'),
+  t('Desc'),
+  t('Items per page'),
+  t('- All -'),
+  t('Offset'),
+  t('« eerste'),
+  t('‹ vorige'),
+  t('volgende ›'),
+  t('laatste »'),
+  t('U bent nog niet aangemeld voor toekomstige evenementen.'),
+  t('Event'),
+  t('Contact'),
+  t('Drupal User'),
+  t('.'),
+  t('Datum'),
+  t('Evenement'),
+  t('Rol'),
+  t('Status'),
+  t('Afmelden'),
+  t('Pagina Mijn evenementen (alle blokken)'),
+  t('Blok Mijn evenementen (aangemeld)'),
 );
