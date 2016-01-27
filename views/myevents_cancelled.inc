@@ -190,4 +190,3 @@ $translatables['myevents_cancelled'] = array(
   t('Blok Mijn evenementen (geannuleerd)'),
   t('Mijn evenementen (geannuleerd)'),
 );
-

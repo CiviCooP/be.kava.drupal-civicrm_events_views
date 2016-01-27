@@ -269,4 +269,3 @@ $translatables['myevents_attended'] = array(
   t('Blok Mijn evenementen (historie)'),
   t('Mijn evenementen (historie)'),
 );
-

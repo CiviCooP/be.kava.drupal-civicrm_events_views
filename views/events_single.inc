@@ -40,14 +40,14 @@ $handler->display->display_options['relationships']['civicrm_loc_block_address']
 $handler->display->display_options['relationships']['civicrm_loc_block_address']['field'] = 'civicrm_loc_block_address';
 $handler->display->display_options['relationships']['civicrm_loc_block_address']['relationship'] = 'civicrm_loc_block';
 $handler->display->display_options['relationships']['civicrm_loc_block_address']['label'] = 'Address';
-/* Veld: CiviCRM Events: Event ID */
+/* Field: CiviCRM Events: Event ID */
 $handler->display->display_options['fields']['id']['id'] = 'id';
 $handler->display->display_options['fields']['id']['table'] = 'civicrm_event';
 $handler->display->display_options['fields']['id']['field'] = 'id';
 $handler->display->display_options['fields']['id']['label'] = '';
 $handler->display->display_options['fields']['id']['exclude'] = TRUE;
 $handler->display->display_options['fields']['id']['element_label_colon'] = FALSE;
-/* Veld: CiviCRM Events: Titel */
+/* Field: CiviCRM Events: Title */
 $handler->display->display_options['fields']['title']['id'] = 'title';
 $handler->display->display_options['fields']['title']['table'] = 'civicrm_event';
 $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -55,7 +55,7 @@ $handler->display->display_options['fields']['title']['label'] = '';
 $handler->display->display_options['fields']['title']['exclude'] = TRUE;
 $handler->display->display_options['fields']['title']['element_type'] = 'h2';
 $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-/* Veld: CiviCRM Events: Text Link */
+/* Field: CiviCRM Events: Text Link */
 $handler->display->display_options['fields']['text_link_1']['id'] = 'text_link_1';
 $handler->display->display_options['fields']['text_link_1']['table'] = 'civicrm_event';
 $handler->display->display_options['fields']['text_link_1']['field'] = 'text_link';
@@ -64,13 +64,13 @@ $handler->display->display_options['fields']['text_link_1']['element_type'] = 's
 $handler->display->display_options['fields']['text_link_1']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['text_link_1']['link_to_civicrm_event'] = 'register';
 $handler->display->display_options['fields']['text_link_1']['link_text'] = 'Nu inschrijven';
-/* Veld: CiviCRM Events: Event Type */
+/* Field: CiviCRM Events: Event Type */
 $handler->display->display_options['fields']['event_type']['id'] = 'event_type';
 $handler->display->display_options['fields']['event_type']['table'] = 'civicrm_event';
 $handler->display->display_options['fields']['event_type']['field'] = 'event_type';
 $handler->display->display_options['fields']['event_type']['label'] = '';
 $handler->display->display_options['fields']['event_type']['element_label_colon'] = FALSE;
-/* Veld: CiviCRM Events: Start Date */
+/* Field: CiviCRM Events: Start Date */
 $handler->display->display_options['fields']['start_date']['id'] = 'start_date';
 $handler->display->display_options['fields']['start_date']['table'] = 'civicrm_event';
 $handler->display->display_options['fields']['start_date']['field'] = 'start_date';
@@ -79,7 +79,7 @@ $handler->display->display_options['fields']['start_date']['element_label_colon'
 $handler->display->display_options['fields']['start_date']['date_format'] = 'medium';
 $handler->display->display_options['fields']['start_date']['custom_date_format'] = 'd F';
 $handler->display->display_options['fields']['start_date']['second_date_format'] = 'long';
-/* Veld: CiviCRM Events: End Date */
+/* Field: CiviCRM Events: End Date */
 $handler->display->display_options['fields']['end_date']['id'] = 'end_date';
 $handler->display->display_options['fields']['end_date']['table'] = 'civicrm_event';
 $handler->display->display_options['fields']['end_date']['field'] = 'end_date';
@@ -87,7 +87,7 @@ $handler->display->display_options['fields']['end_date']['label'] = 'Tot';
 $handler->display->display_options['fields']['end_date']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['end_date']['date_format'] = 'short';
 $handler->display->display_options['fields']['end_date']['second_date_format'] = 'long';
-/* Veld: CiviCRM Events: Event duration */
+/* Field: CiviCRM Events: Event duration */
 $handler->display->display_options['fields']['duration']['id'] = 'duration';
 $handler->display->display_options['fields']['duration']['table'] = 'civicrm_event';
 $handler->display->display_options['fields']['duration']['field'] = 'duration';
@@ -96,7 +96,7 @@ $handler->display->display_options['fields']['duration']['alter']['text'] = '[du
 $handler->display->display_options['fields']['duration']['hide_empty'] = TRUE;
 $handler->display->display_options['fields']['duration']['empty_zero'] = TRUE;
 $handler->display->display_options['fields']['duration']['hide_alter_empty'] = TRUE;
-/* Veld: CiviCRM Address: Full Street Address */
+/* Field: CiviCRM Address: Full Street Address */
 $handler->display->display_options['fields']['street_address']['id'] = 'street_address';
 $handler->display->display_options['fields']['street_address']['table'] = 'civicrm_address';
 $handler->display->display_options['fields']['street_address']['field'] = 'street_address';
@@ -108,7 +108,7 @@ $handler->display->display_options['fields']['street_address']['location_type'] 
 $handler->display->display_options['fields']['street_address']['location_op'] = '0';
 $handler->display->display_options['fields']['street_address']['is_primary'] = 0;
 $handler->display->display_options['fields']['street_address']['is_billing'] = 0;
-/* Veld: CiviCRM Address: ZIP / Postal Code */
+/* Field: CiviCRM Address: ZIP / Postal Code */
 $handler->display->display_options['fields']['postal_code']['id'] = 'postal_code';
 $handler->display->display_options['fields']['postal_code']['table'] = 'civicrm_address';
 $handler->display->display_options['fields']['postal_code']['field'] = 'postal_code';
@@ -120,7 +120,7 @@ $handler->display->display_options['fields']['postal_code']['location_type'] = '
 $handler->display->display_options['fields']['postal_code']['location_op'] = '0';
 $handler->display->display_options['fields']['postal_code']['is_primary'] = 0;
 $handler->display->display_options['fields']['postal_code']['is_billing'] = 0;
-/* Veld: CiviCRM Address: City / Suburb */
+/* Field: CiviCRM Address: City / Suburb */
 $handler->display->display_options['fields']['city']['id'] = 'city';
 $handler->display->display_options['fields']['city']['table'] = 'civicrm_address';
 $handler->display->display_options['fields']['city']['field'] = 'city';
@@ -132,24 +132,24 @@ $handler->display->display_options['fields']['city']['location_type'] = '0';
 $handler->display->display_options['fields']['city']['location_op'] = '0';
 $handler->display->display_options['fields']['city']['is_primary'] = 0;
 $handler->display->display_options['fields']['city']['is_billing'] = 0;
-/* Veld: CiviCRM Custom: Zalen KAVA: Zaal */
+/* Field: CiviCRM Custom: Zalen KAVA: Zaal */
 $handler->display->display_options['fields']['zaal_5']['id'] = 'zaal_5';
 $handler->display->display_options['fields']['zaal_5']['table'] = 'civicrm_value_event_zalen';
 $handler->display->display_options['fields']['zaal_5']['field'] = 'zaal_5';
 $handler->display->display_options['fields']['zaal_5']['hide_empty'] = TRUE;
 $handler->display->display_options['fields']['zaal_5']['empty_zero'] = TRUE;
-/* Veld: CiviCRM Events: Omschrijving */
+/* Field: CiviCRM Events: Description */
 $handler->display->display_options['fields']['description']['id'] = 'description';
 $handler->display->display_options['fields']['description']['table'] = 'civicrm_event';
 $handler->display->display_options['fields']['description']['field'] = 'description';
 $handler->display->display_options['fields']['description']['element_type'] = 'div';
 $handler->display->display_options['fields']['description']['text_format'] = 'full_html';
-/* Veld: Broken/missing handler */
+/* Field: Broken/missing handler */
 $handler->display->display_options['fields']['accreditatiepunten_9']['id'] = 'accreditatiepunten_9';
 $handler->display->display_options['fields']['accreditatiepunten_9']['table'] = 'civicrm_value_event_accreditering';
 $handler->display->display_options['fields']['accreditatiepunten_9']['field'] = 'accreditatiepunten_9';
 $handler->display->display_options['fields']['accreditatiepunten_9']['hide_empty'] = TRUE;
-/* Veld: CiviCRM Custom: Bijkomende info: Spreker */
+/* Field: CiviCRM Custom: Bijkomende info: Spreker */
 $handler->display->display_options['fields']['spreker_56']['id'] = 'spreker_56';
 $handler->display->display_options['fields']['spreker_56']['table'] = 'civicrm_value_event_registration';
 $handler->display->display_options['fields']['spreker_56']['field'] = 'spreker_56';
@@ -175,14 +175,14 @@ $handler->display->display_options['filters']['is_online_registration']['value']
 /* Display: Pagina Evenement (los) */
 $handler = $view->new_display('page', 'Pagina Evenement (los)', 'page_events_single');
 $handler->display->display_options['defaults']['fields'] = FALSE;
-/* Veld: CiviCRM Events: Event ID */
+/* Field: CiviCRM Events: Event ID */
 $handler->display->display_options['fields']['id']['id'] = 'id';
 $handler->display->display_options['fields']['id']['table'] = 'civicrm_event';
 $handler->display->display_options['fields']['id']['field'] = 'id';
 $handler->display->display_options['fields']['id']['label'] = '';
 $handler->display->display_options['fields']['id']['exclude'] = TRUE;
 $handler->display->display_options['fields']['id']['element_label_colon'] = FALSE;
-/* Veld: CiviCRM Events: Titel */
+/* Field: CiviCRM Events: Title */
 $handler->display->display_options['fields']['title']['id'] = 'title';
 $handler->display->display_options['fields']['title']['table'] = 'civicrm_event';
 $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -190,7 +190,7 @@ $handler->display->display_options['fields']['title']['label'] = '';
 $handler->display->display_options['fields']['title']['exclude'] = TRUE;
 $handler->display->display_options['fields']['title']['element_type'] = 'h2';
 $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-/* Veld: CiviCRM Events: Event Type */
+/* Field: CiviCRM Events: Event Type */
 $handler->display->display_options['fields']['event_type']['id'] = 'event_type';
 $handler->display->display_options['fields']['event_type']['table'] = 'civicrm_event';
 $handler->display->display_options['fields']['event_type']['field'] = 'event_type';
@@ -200,11 +200,12 @@ $handler->display->display_options['fields']['event_type']['element_class'] = 'e
 $handler->display->display_options['fields']['event_type']['element_label_colon'] = FALSE;
 $handler->display->display_options['fields']['event_type']['element_wrapper_type'] = '0';
 $handler->display->display_options['fields']['event_type']['element_default_classes'] = FALSE;
-/* Veld: CiviCRM Events: End Date */
+/* Field: CiviCRM Events: End Date */
 $handler->display->display_options['fields']['end_date']['id'] = 'end_date';
 $handler->display->display_options['fields']['end_date']['table'] = 'civicrm_event';
 $handler->display->display_options['fields']['end_date']['field'] = 'end_date';
 $handler->display->display_options['fields']['end_date']['label'] = '';
+$handler->display->display_options['fields']['end_date']['exclude'] = TRUE;
 $handler->display->display_options['fields']['end_date']['element_type'] = 'div';
 $handler->display->display_options['fields']['end_date']['element_class'] = 'content-inline content-inline--end-date';
 $handler->display->display_options['fields']['end_date']['element_label_type'] = 'div';
@@ -215,11 +216,13 @@ $handler->display->display_options['fields']['end_date']['element_wrapper_class'
 $handler->display->display_options['fields']['end_date']['element_default_classes'] = FALSE;
 $handler->display->display_options['fields']['end_date']['date_format'] = 'short';
 $handler->display->display_options['fields']['end_date']['second_date_format'] = 'long';
-/* Veld: CiviCRM Events: Start Date */
+/* Field: CiviCRM Events: Start Date */
 $handler->display->display_options['fields']['start_date']['id'] = 'start_date';
 $handler->display->display_options['fields']['start_date']['table'] = 'civicrm_event';
 $handler->display->display_options['fields']['start_date']['field'] = 'start_date';
 $handler->display->display_options['fields']['start_date']['label'] = 'Wanneer';
+$handler->display->display_options['fields']['start_date']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['start_date']['alter']['text'] = '[start_date] - [end_date]';
 $handler->display->display_options['fields']['start_date']['element_type'] = 'div';
 $handler->display->display_options['fields']['start_date']['element_class'] = 'content-inline content-inline--date';
 $handler->display->display_options['fields']['start_date']['element_label_type'] = 'div';
@@ -230,7 +233,7 @@ $handler->display->display_options['fields']['start_date']['element_default_clas
 $handler->display->display_options['fields']['start_date']['date_format'] = 'short';
 $handler->display->display_options['fields']['start_date']['custom_date_format'] = 'd F';
 $handler->display->display_options['fields']['start_date']['second_date_format'] = 'long';
-/* Veld: CiviCRM Events: Start Date */
+/* Field: CiviCRM Events: Start Date */
 $handler->display->display_options['fields']['start_date_1']['id'] = 'start_date_1';
 $handler->display->display_options['fields']['start_date_1']['table'] = 'civicrm_event';
 $handler->display->display_options['fields']['start_date_1']['field'] = 'start_date';
@@ -244,7 +247,7 @@ $handler->display->display_options['fields']['start_date_1']['element_wrapper_cl
 $handler->display->display_options['fields']['start_date_1']['element_default_classes'] = FALSE;
 $handler->display->display_options['fields']['start_date_1']['date_format'] = 'starting_hour_h_i_';
 $handler->display->display_options['fields']['start_date_1']['second_date_format'] = 'long';
-/* Veld: CiviCRM Events: Event duration */
+/* Field: CiviCRM Events: Event duration */
 $handler->display->display_options['fields']['duration']['id'] = 'duration';
 $handler->display->display_options['fields']['duration']['table'] = 'civicrm_event';
 $handler->display->display_options['fields']['duration']['field'] = 'duration';
@@ -260,7 +263,7 @@ $handler->display->display_options['fields']['duration']['element_default_classe
 $handler->display->display_options['fields']['duration']['hide_empty'] = TRUE;
 $handler->display->display_options['fields']['duration']['empty_zero'] = TRUE;
 $handler->display->display_options['fields']['duration']['hide_alter_empty'] = TRUE;
-/* Veld: CiviCRM Address: ZIP / Postal Code */
+/* Field: CiviCRM Address: ZIP / Postal Code */
 $handler->display->display_options['fields']['postal_code']['id'] = 'postal_code';
 $handler->display->display_options['fields']['postal_code']['table'] = 'civicrm_address';
 $handler->display->display_options['fields']['postal_code']['field'] = 'postal_code';
@@ -278,7 +281,7 @@ $handler->display->display_options['fields']['postal_code']['location_type'] = '
 $handler->display->display_options['fields']['postal_code']['location_op'] = '0';
 $handler->display->display_options['fields']['postal_code']['is_primary'] = 0;
 $handler->display->display_options['fields']['postal_code']['is_billing'] = 0;
-/* Veld: CiviCRM Address: City / Suburb */
+/* Field: CiviCRM Address: City / Suburb */
 $handler->display->display_options['fields']['city']['id'] = 'city';
 $handler->display->display_options['fields']['city']['table'] = 'civicrm_address';
 $handler->display->display_options['fields']['city']['field'] = 'city';
@@ -296,7 +299,7 @@ $handler->display->display_options['fields']['city']['location_type'] = '0';
 $handler->display->display_options['fields']['city']['location_op'] = '0';
 $handler->display->display_options['fields']['city']['is_primary'] = 0;
 $handler->display->display_options['fields']['city']['is_billing'] = 0;
-/* Veld: CiviCRM Address: Full Street Address */
+/* Field: CiviCRM Address: Full Street Address */
 $handler->display->display_options['fields']['street_address']['id'] = 'street_address';
 $handler->display->display_options['fields']['street_address']['table'] = 'civicrm_address';
 $handler->display->display_options['fields']['street_address']['field'] = 'street_address';
@@ -317,7 +320,7 @@ $handler->display->display_options['fields']['street_address']['location_type'] 
 $handler->display->display_options['fields']['street_address']['location_op'] = '0';
 $handler->display->display_options['fields']['street_address']['is_primary'] = 0;
 $handler->display->display_options['fields']['street_address']['is_billing'] = 0;
-/* Veld: CiviCRM Custom: Zalen KAVA: Zaal */
+/* Field: CiviCRM Custom: Zalen KAVA: Zaal */
 $handler->display->display_options['fields']['zaal_5']['id'] = 'zaal_5';
 $handler->display->display_options['fields']['zaal_5']['table'] = 'civicrm_value_event_zalen';
 $handler->display->display_options['fields']['zaal_5']['field'] = 'zaal_5';
@@ -330,7 +333,7 @@ $handler->display->display_options['fields']['zaal_5']['element_wrapper_class'] 
 $handler->display->display_options['fields']['zaal_5']['element_default_classes'] = FALSE;
 $handler->display->display_options['fields']['zaal_5']['hide_empty'] = TRUE;
 $handler->display->display_options['fields']['zaal_5']['empty_zero'] = TRUE;
-/* Veld: CiviCRM Custom: Bijkomende info: Spreker */
+/* Field: CiviCRM Custom: Bijkomende info: Spreker */
 $handler->display->display_options['fields']['spreker_56']['id'] = 'spreker_56';
 $handler->display->display_options['fields']['spreker_56']['table'] = 'civicrm_value_event_registration';
 $handler->display->display_options['fields']['spreker_56']['field'] = 'spreker_56';
@@ -342,7 +345,7 @@ $handler->display->display_options['fields']['spreker_56']['element_wrapper_type
 $handler->display->display_options['fields']['spreker_56']['element_wrapper_class'] = 'event-field-lecturer event-field-with-label';
 $handler->display->display_options['fields']['spreker_56']['element_default_classes'] = FALSE;
 $handler->display->display_options['fields']['spreker_56']['hide_empty'] = TRUE;
-/* Veld: Broken/missing handler */
+/* Field: Broken/missing handler */
 $handler->display->display_options['fields']['accreditatiepunten_9']['id'] = 'accreditatiepunten_9';
 $handler->display->display_options['fields']['accreditatiepunten_9']['table'] = 'civicrm_value_event_accreditering';
 $handler->display->display_options['fields']['accreditatiepunten_9']['field'] = 'accreditatiepunten_9';
@@ -354,7 +357,7 @@ $handler->display->display_options['fields']['accreditatiepunten_9']['element_wr
 $handler->display->display_options['fields']['accreditatiepunten_9']['element_wrapper_class'] = 'event-field-accr event-field-with-label';
 $handler->display->display_options['fields']['accreditatiepunten_9']['element_default_classes'] = FALSE;
 $handler->display->display_options['fields']['accreditatiepunten_9']['hide_empty'] = TRUE;
-/* Veld: CiviCRM Events: Omschrijving */
+/* Field: CiviCRM Events: Description */
 $handler->display->display_options['fields']['description']['id'] = 'description';
 $handler->display->display_options['fields']['description']['table'] = 'civicrm_event';
 $handler->display->display_options['fields']['description']['field'] = 'description';
@@ -365,7 +368,7 @@ $handler->display->display_options['fields']['description']['element_label_colon
 $handler->display->display_options['fields']['description']['element_wrapper_type'] = '0';
 $handler->display->display_options['fields']['description']['element_default_classes'] = FALSE;
 $handler->display->display_options['fields']['description']['text_format'] = 'full_html';
-/* Veld: CiviCRM Events: Text Link */
+/* Field: CiviCRM Events: Text Link */
 $handler->display->display_options['fields']['text_link_1']['id'] = 'text_link_1';
 $handler->display->display_options['fields']['text_link_1']['table'] = 'civicrm_event';
 $handler->display->display_options['fields']['text_link_1']['field'] = 'text_link';
@@ -400,12 +403,13 @@ $translatables['events_single'] = array(
   t('[duration]u'),
   t('Adres'),
   t('Zaal'),
-  t('Omschrijving'),
+  t('Description'),
   t('Broken handler civicrm_value_event_accreditering.accreditatiepunten_9'),
   t('Spreker'),
   t('Alle'),
   t('Pagina Evenement (los)'),
   t('Wanneer'),
+  t('[start_date] - [end_date]'),
   t('Aanvangsuur'),
   t('Locatie'),
   t('[street_address]

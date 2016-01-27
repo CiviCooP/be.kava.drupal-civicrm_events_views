@@ -39,7 +39,8 @@ function civicrm_events_views_cancel_form($form, &$form_state, $participant_id) 
     } else {
 
         $form['warning']['#type'] = 'markup';
-        $form['warning']['#markup'] = '<p><strong>' . t('Het is niet meer mogelijk je online af te melden voor dit evenement. Neem contact op met KAVA.') . '</strong></p>';
+        //$form['warning']['#markup'] = '<p><strong>' . t('Het is niet meer mogelijk je online af te melden voor dit evenement. Neem contact op met KAVA.') . '</strong></p>';
+        $form['warning']['#markup'] = '<p>' . t('Voor deze opleiding kunt u zich niet meer inschrijven:') . '</p><p>'.t('- Voor <strong>gratis</strong> evenementen kunt u zich tot 15u op de dag zelf uitschrijven.').'</p><p>'.t('- Voor <strong>betaalde</strong> evenementen kan wel nog uw inschrijving worden doorgeven aan een collega. Laat het ons uiterlijk weten om 15u op de dag zelf via e-mail aan <a href="mailto:secretariaat@kava.be">secretariaat@kava.be</a>.').'</p>';
     }
 
     return $form;
